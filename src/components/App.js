@@ -10,6 +10,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
+    // 사용자의 로그인 유무를 알려주는 이벤트 리스너 (계정 만들기, 로그인 등의 버튼을 누를 때도 트리거 됨)
     authService.onAuthStateChanged((user) => {
       if (user) {
         // when user is signed in
