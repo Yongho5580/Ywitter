@@ -6,7 +6,6 @@ function App() {
   // init 이 false 이면 AppRouter 를 hidden 시키기 위해서 추가한 state 값이다. 즉, useEffect 를 통해
   // 모든 마운팅이 끝나야 홈페이지를 보여주기 위함이다.
   const [init, setInit] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
@@ -14,23 +13,19 @@ function App() {
     authService.onAuthStateChanged((user) => {
       if (user) {
         // when user is signed in
-        setIsLoggedIn(true);
-        // 로그인한 유저의 정보를 담기 위한 state 값
         setUserObj(user);
-      } else {
-        setIsLoggedIn(false);
       }
       setInit(true);
     });
   }, []);
   return (
     <>
+      {/*userObj 가 있어야 로그인되게 하는 기능 */}
       {init ? (
-        <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} />
+        <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} />
       ) : (
         "Initializing..."
       )}
-      <footer>&copy; {new Date().getFullYear()} Ywitter</footer>
     </>
   );
 }

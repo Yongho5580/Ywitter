@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth"; // 파이어베이스 인증기능 사용
 import "firebase/firestore"; // 파이어베이스 데이터베이스 사용
+import "firebase/storage"; // 파이어베이스 스토리지 사용 (사진 저장용)
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -17,5 +18,5 @@ firebase.initializeApp(firebaseConfig);
 export const firebaseInstance = firebase;
 
 export const authService = firebase.auth();
-
 export const dbService = firebase.firestore();
+export const storageService = firebase.storage();
