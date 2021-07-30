@@ -13,16 +13,34 @@ function App() {
     authService.onAuthStateChanged((user) => {
       if (user) {
         // when user is signed in
-        setUserObj(user);
+        setUserObj({
+          displayName: user.displayName,
+          uid: user.uid,
+          updateProfile: (args) => user.updateProfile(args),
+        });
       }
       setInit(true);
     });
   }, []);
+  // refreshUser 함수는 Profile 에서 닉네임을 변경했을 때 작동하기 위한 함수
+  const refreshUser = () => {
+    const user = authService.currentUser;
+    console.log(user);
+    setUserObj({
+      displayName: user.displayName,
+      uid: user.uid,
+      updateProfile: (args) => user.updateProfile(args),
+    });
+  };
   return (
     <>
       {/*userObj 가 있어야 로그인되게 하는 기능 */}
       {init ? (
-        <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} />
+        <AppRouter
+          refreshUser={refreshUser}
+          isLoggedIn={Boolean(userObj)}
+          userObj={userObj}
+        />
       ) : (
         "Initializing..."
       )}

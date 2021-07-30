@@ -10,12 +10,12 @@ import Home from "../routes/Home";
 import Navigation from "./Navigation";
 import Profile from "../routes/Profile";
 
-const AppRouter = ({ isLoggedIn, userObj }) => {
+const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
   // 로그인 한 유저는 Home 으로, 로그인 안한 유저는 Auth 로 라우팅하는 컴포넌트
   return (
     <Router>
       {/*isLoggedIn 이 true 일 경우 (로그인이 됐을 경우) 네비게이션을 보여준다. */}
-      {isLoggedIn && <Navigation />}
+      {isLoggedIn && <Navigation userObj={userObj} />}
       <Switch>
         {isLoggedIn ? (
           <>
@@ -23,7 +23,7 @@ const AppRouter = ({ isLoggedIn, userObj }) => {
               <Home userObj={userObj} />
             </Route>
             <Route exact path="/profile">
-              <Profile />
+              <Profile refreshUser={refreshUser} userObj={userObj} />
             </Route>
             <Redirect from="*" to="/" />
           </>
