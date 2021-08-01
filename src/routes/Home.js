@@ -12,13 +12,14 @@ const Home = ({ userObj }) => {
     // 아래에서는 map 메소드를 사용했는데 forEach 같은 경우는 리렌더링이 많이 발생하게 된다. 하지만 map 은 덜 발생함.
     // 메소드의 문제가 아니라 이전에는 forEach 로 데이터를 계속해서 업데이트 했는데 이번 방식은 map 으로 한번에 배열을 정렬하고
     // 그 다음에 이 배열을 한번에 state 값으로 저장하기 때문임.
-    dbService.collection("yweets").onSnapshot((snapshot) => {
+    const getData = dbService.collection("yweets").onSnapshot((snapshot) => {
       const yweetsArr = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
       setYweets(yweetsArr);
     });
+    return () => getData();
   }, []);
 
   return (

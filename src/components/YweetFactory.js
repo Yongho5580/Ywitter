@@ -8,6 +8,9 @@ const YweetFactory = ({ userObj }) => {
   // onSubmit 함수가 실행되면 yweets 컬랙션에 yweet, createdAt 필드를 생성하고
   // 그 값을 할당한다. 그리고 yweet 의 값을 빈 값으로 다시 만든다.
   const onSubmit = async (e) => {
+    if (yweet === "") {
+      return;
+    }
     e.preventDefault();
     let attachmentUrl = "";
     // 해당 트윗이 사진을 포함하고 있다면 다음의 과정을 통해 사진을 불러온다.

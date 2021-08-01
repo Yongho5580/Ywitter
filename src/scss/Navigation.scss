@@ -1,0 +1,17 @@
+.Navigation-Ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 50;
+  list-style: none;
+}
+
+.Link-toHome {
+  margin-right: 20px;
+}
+
+.Link-toProfile {
+  display: flex;
+  margin-left: 20px;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,6 +1,13 @@
 import React from "react";
 import AuthForm from "../components/AuthForm";
 import { authService, firebaseInstance } from "../fbase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faGoogle,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import "../css/Auth.css";
 
 /*
 input 들의 value 에 state 값을 부여하고 onChange 이벤트를 통해 만약 해당 이벤트가 발생된 곳의 name이
@@ -23,14 +30,22 @@ const Auth = () => {
   };
 
   return (
-    <div>
+    <div className="Auth-Container">
+      <div className="Auth-Container-Ywitter">Ywitter</div>
+      <FontAwesomeIcon
+        icon={faTwitter}
+        color={"#04AAFF"}
+        size="3x"
+        style={{ marginBottom: 30 }}
+      />
       <AuthForm />
-      <div>
-        <button onClick={onSocialClick} name="google">
-          Google로 로그인
+      <div className="Auth-Btns-Container">
+        <button className="Auth-Btns" onClick={onSocialClick} name="google">
+          <FontAwesomeIcon icon={faGoogle} />
+          oogle로 로그인
         </button>
-        <button onClick={onSocialClick} name="github">
-          Github으로 로그인
+        <button className="Auth-Btns" onClick={onSocialClick} name="github">
+          <FontAwesomeIcon icon={faGithub} /> Github으로 로그인
         </button>
       </div>
     </div>
