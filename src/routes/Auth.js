@@ -31,22 +31,20 @@ const Auth = () => {
   };
 
   return (
-    <div className="Auth-Container">
-      <div className="Auth-Container-Ywitter">Ywitter</div>
+    <div className="authContainer">
       <FontAwesomeIcon
         icon={faTwitter}
         color={"#04AAFF"}
         size="3x"
-        style={{ marginBottom: 30 }}
+        style={{ marginBottom: 30, marginLeft: 20 }}
       />
       <AuthForm />
-      <div className="Auth-Btns-Container">
-        <button className="Auth-Btns" onClick={onSocialClick} name="google">
-          <FontAwesomeIcon icon={faGoogle} />
-          oogle로 로그인
+      <div className="authBtns">
+        <button onClick={onSocialClick} name="google" className="authBtn">
+          Continue with Google <FontAwesomeIcon icon={faGoogle} />
         </button>
-        <button className="Auth-Btns" onClick={onSocialClick} name="github">
-          <FontAwesomeIcon icon={faGithub} /> Github으로 로그인
+        <button onClick={onSocialClick} name="github" className="authBtn">
+          Continue with Github <FontAwesomeIcon icon={faGithub} />
         </button>
       </div>
     </div>

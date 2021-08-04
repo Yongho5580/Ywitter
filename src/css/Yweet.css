@@ -1,6 +1,12 @@
-.Yweet {
+.nweetEdit .formBtn {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.nweet {
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ecf0f1;
   width: 100%;
   max-width: 320px;
   padding: 20px;
@@ -16,41 +22,30 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.Yweet h4 {
+.nweet h4 {
   font-size: 14px;
 }
 
-.Yweet img {
+.nweet img {
+  right: 10px;
+  top: 30px;
   position: absolute;
-  top: 20px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   margin-top: 10px;
-  right: 0px;
 }
 
-.Yweet-Actions {
+.nweet__actions {
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-.Yweet-Actions span {
+.nweet__actions span {
   cursor: pointer;
 }
 
-.Yweet-Actions span:first-child {
+.nweet__actions span:first-child {
   margin-right: 10px;
-}
-
-.Yweet-Correction-Btn {
-  cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-.Yweet-Correction-Cancel-Btn {
-  cursor: pointer;
-  margin-top: 10px;
 }

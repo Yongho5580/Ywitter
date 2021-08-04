@@ -1,50 +1,38 @@
-.AuthForm-Container {
+.authInput {
+  max-width: 320px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.AuthForm-Input {
-  width: 100%;
-  max-width: 300px;
-  padding: 8px;
+  padding: 10px;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(213, 219, 228);
   margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.AuthForm-OnSubmit {
-  max-width: 100px;
-  width: 100%;
-  padding: 8px;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 1);
-  margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 12px;
   color: black;
+  box-sizing: content-box;
+}
+
+.authSubmit {
   text-align: center;
   background: #04aaff;
   color: white;
   margin-top: 10px;
+  box-sizing: content-box;
   cursor: pointer;
 }
 
-.AuthForm-Switch {
-  cursor: pointer;
+.authError {
+  color: tomato;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.authSwitch {
   color: #04aaff;
+  cursor: pointer;
   margin-top: 10px;
   margin-bottom: 50px;
+  margin-left: 20px;
   display: block;
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: underline;
-}
-
-.AuthForm-Error {
-  color: #ee5253;
-  text-align: center;
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 15px;
 }

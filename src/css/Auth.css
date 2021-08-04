@@ -1,12 +1,4 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.Auth-Container {
+.authContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,10 +13,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f1f2f6;
 }
 
-.Auth-Btns-Container {
+.authBtns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,18 +26,14 @@ body {
   max-width: 320px;
 }
 
-.Auth-Btns {
+.authBtn {
   cursor: pointer;
   border-radius: 20px;
-  padding: 6px 0px;
+  border: none;
+  padding: 10px 0px;
   font-size: 12px;
   text-align: center;
   width: 150px;
-  background: white;
-}
-
-.Auth-Container-Ywitter {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #2e86de;
+  background: #ecf0f1;
+  cursor: pointer;
 }

@@ -27,7 +27,6 @@ const Home = ({ userObj }) => {
     <div className="container">
       <YweetFactory userObj={userObj} />
       <div style={{ marginTop: 30 }}>
-        {/* 우리가 임의로 부여한 yweet의 creatorId와 userObj의 uid의 값이 일치하면 동일 유저임으로 트윗 추가, 삭제 버튼을 부여할 수 있게 해주는 프로퍼티*/}
         {yweets.map((yweet) => (
           <Yweet
             key={yweet.id}

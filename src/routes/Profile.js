@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { authService, dbService } from "../fbase";
 import { useHistory } from "react-router-dom";
+import "../css/Profile.css";
 import "../css/App.css";
 const Profile = ({ userObj, refreshUser }) => {
   const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
@@ -18,17 +19,24 @@ const Profile = ({ userObj, refreshUser }) => {
         .where("creatorId", "==", userObj.uid)
         .orderBy("createdAt")
         .get();
-      console.log(yweets.docs.map((doc) => doc.data()));
     };
     getMyYweets();
   });
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (userObj.displayName !== newDisplayName) {
-      await userObj.updateProfile({
-        displayName: newDisplayName,
-      });
+    const ok = window.confirm("프로필을 업데이트 하시겠습니까?");
+    if (userObj.displayName !== newDisplayName && newDisplayName !== "") {
+      if (ok) {
+        await userObj.updateProfile({
+          displayName: newDisplayName,
+        });
+        window.confirm("업데이트를 완료했습니다.");
+      } else {
+        return;
+      }
       refreshUser();
+    } else {
+      window.confirm("닉네임이 공백이거나 이전 프로필과 동일합니다.");
     }
   };
   const onChange = (e) => {
@@ -40,16 +48,23 @@ const Profile = ({ userObj, refreshUser }) => {
 
   return (
     <div className="container">
-      <form className="profileForm" onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="profileForm">
         <input
-          autoFocus
           onChange={onChange}
-          value={newDisplayName}
           type="text"
-          placeholder="Display name"
+          autoFocus
+          placeholder="닉네임을 입력하세요"
+          value={newDisplayName}
           className="formInput"
         />
-        <input className="formBtn" type="submit" value="Update Profile" />
+        <input
+          type="submit"
+          value="프로필 업데이트"
+          className="formBtn"
+          style={{
+            marginTop: 10,
+          }}
+        />
       </form>
       <span className="formBtn cancelBtn logOut" onClick={onLogoutClick}>
         로그아웃

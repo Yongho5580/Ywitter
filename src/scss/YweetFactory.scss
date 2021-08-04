@@ -1,11 +1,11 @@
-.YweetFactory-Form {
+.factoryForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.YweetFactory-Input-Container {
+.factoryInput__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,31 +15,18 @@
   width: 100%;
 }
 
-.YweetFactory-Input {
+.factoryInput__input {
   flex-grow: 1;
   height: 40px;
   padding: 0px 20px;
-  color: white;
+  color: #7f8c8d;
   border: 1px solid #04aaff;
   border-radius: 20px;
   font-weight: 500;
   font-size: 12px;
 }
 
-.YweetFactory-Form-Attachment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  img {
-    margin-top: 10px;
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
-  }
-}
-
-.YweetFactory-InputArrow {
-  cursor: pointer;
+.factoryInput__arrow {
   position: absolute;
   right: 0;
   background-color: #04aaff;
@@ -49,27 +36,38 @@
   text-align: center;
   border-radius: 20px;
   color: white;
+  box-sizing: border-box;
 }
 
-.YweetFactory-Form-Clear {
+.factoryInput__label {
+  color: #04aaff;
+  cursor: pointer;
+}
+
+.factoryInput__label span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.factoryForm__attachment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.factoryForm__attachment img {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.factoryForm__clear {
   color: #04aaff;
   cursor: pointer;
   text-align: center;
-  span {
-    margin-right: 10px;
-    font-size: 12px;
-  }
 }
 
-.YweetFactory-Label {
-  color: #04aaff;
-  cursor: pointer;
-  span {
-    margin-right: 10px;
-    font-size: 12px;
-  }
-}
-
-.YweetFactory-AddPhotos-Btn {
-  display: none;
+.factoryForm__clear span {
+  margin-right: 10px;
+  font-size: 12px;
 }

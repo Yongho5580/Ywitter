@@ -34,6 +34,7 @@ const YweetFactory = ({ userObj }) => {
       attachmentUrl = await response.ref.getDownloadURL();
     }
     const yweetObj = {
+      displayName: userObj.displayName,
       text: yweet,
       createdAt: Date.now(),
       creatorId: userObj.uid,
@@ -69,45 +70,41 @@ const YweetFactory = ({ userObj }) => {
   };
   const onClearAttachment = () => setAttachment("");
   return (
-    <form className="YweetFactory-Form" onSubmit={onSubmit}>
-      <div className="YweetFactory-Input-Container">
+    <form onSubmit={onSubmit} className="factoryForm">
+      <div className="factoryInput__container">
         <input
+          className="factoryInput__input"
           value={yweet}
           onChange={onChange}
           type="text"
-          placeholder="트윗을 작성해주세요"
+          placeholder="오늘의 이슈는 무엇인가요?"
           maxLength={120}
-          className="YweetFactory-Input"
         />
-        <input
-          type="submit"
-          value="&rarr;"
-          className="YweetFactory-InputArrow"
-        />
+        <input type="submit" value="&rarr;" className="factoryInput__arrow" />
       </div>
-      {/* 사진을 추가하는 버튼은 type 을 file 로 하면된다. */}
-      <label for="attach-file" className="YweetFactory-Label">
-        <span>Add photos</span>
+      <label htmlFor="attach-file" className="factoryInput__label">
+        <span>사진 추가하기</span>
         <FontAwesomeIcon icon={faPlus} />
       </label>
       <input
         id="attach-file"
-        onChange={onFileChange}
         type="file"
         accept="image/*"
-        className="YweetFactory-AddPhotos-Btn"
+        onChange={onFileChange}
+        style={{
+          opacity: 0,
+        }}
       />
       {attachment && (
-        <div className="YweetFactory-Form-Attachment">
+        <div className="factoryForm__attachment">
           <img
             src={attachment}
-            alt="preview"
             style={{
               backgroundImage: attachment,
             }}
           />
-          <div className="YweetFactory-Form-Clear" onClick={onClearAttachment}>
-            <span>지우기</span>
+          <div className="factoryForm__clear" onClick={onClearAttachment}>
+            <span>Remove</span>
             <FontAwesomeIcon icon={faTimes} />
           </div>
         </div>
