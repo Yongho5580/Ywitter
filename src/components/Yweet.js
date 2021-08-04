@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { dbService, storageService } from "../fbase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import "../css/Yweet.css";
+import "../css/App.css";
 
 const Yweet = ({ yweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -35,24 +39,31 @@ const Yweet = ({ yweetObj, isOwner }) => {
   };
 
   return (
-    <div>
+    <div className="Yweet">
       {/* editing 버튼을 누르면 다음의 form 이 나오게 되고 아니라면 일반적인 트윗이 나오게 하는데
           해당 트윗의 작성자가 아닐경우 다음의 form 을 보여주지 않는다.*/}
       {editing ? (
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit}>
+              <form className="container yweetEdit" onSubmit={onSubmit}>
                 <input
                   type="text"
                   placeholder="수정할 트윗을 작성해주세요."
                   onChange={onChange}
                   value={newYweet}
                   required
+                  className="formInput"
                 />
-                <input type="submit" value="수정하기"></input>
+                <input
+                  className="formBtn"
+                  type="submit"
+                  value="수정하기"
+                ></input>
               </form>
-              <button onClick={toggleEditing}>작성 취소</button>
+              <span className="formBtn cancelBtn" onClick={toggleEditing}>
+                취소
+              </span>
             </>
           )}
         </>
@@ -69,10 +80,14 @@ const Yweet = ({ yweetObj, isOwner }) => {
             />
           )}
           {isOwner && (
-            <>
-              <button onClick={toggleEditing}>수정</button>
-              <button onClick={onDeleteClick}>삭제</button>
-            </>
+            <div className="Yweet-Actions">
+              <span onClick={toggleEditing}>
+                <FontAwesomeIcon icon={faPencilAlt} />
+              </span>
+              <span onClick={onDeleteClick}>
+                <FontAwesomeIcon icon={faTrash} />
+              </span>
+            </div>
           )}
         </>
       )}

@@ -1,0 +1,101 @@
+.YweetFactory-Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.YweetFactory-Input-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.YweetFactory-Input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 40px;
+  padding: 0px 20px;
+  color: white;
+  border: 1px solid #04aaff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.YweetFactory-Form-Attachment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.YweetFactory-Form-Attachment img {
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+}
+
+.YweetFactory-InputArrow {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background-color: #04aaff;
+  height: 40px;
+  width: 40px;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+
+.YweetFactory-Form-Clear {
+  color: #04aaff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.YweetFactory-Form-Clear span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.YweetFactory-Label {
+  color: #04aaff;
+  cursor: pointer;
+}
+
+.YweetFactory-Label span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.YweetFactory-AddPhotos-Btn {
+  display: none;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AppRouter from "./Router";
 import { authService } from "../fbase";
+import "../css/App.css";
 
 function App() {
   // init 이 false 이면 AppRouter 를 hidden 시키기 위해서 추가한 state 값이다. 즉, useEffect 를 통해

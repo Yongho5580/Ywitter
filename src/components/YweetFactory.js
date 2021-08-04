@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { storageService, dbService } from "../fbase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "../css/App.css";
+import "../css/YweetFactory.css";
 
 const YweetFactory = ({ userObj }) => {
   const [yweet, setYweet] = useState("");
@@ -9,7 +13,12 @@ const YweetFactory = ({ userObj }) => {
   // 그 값을 할당한다. 그리고 yweet 의 값을 빈 값으로 다시 만든다.
   const onSubmit = async (e) => {
     if (yweet === "") {
-      return;
+      const ok = window.confirm("트윗을 작성해주세요");
+      if (ok) {
+        return;
+      } else {
+        return;
+      }
     }
     e.preventDefault();
     let attachmentUrl = "";
@@ -60,21 +69,47 @@ const YweetFactory = ({ userObj }) => {
   };
   const onClearAttachment = () => setAttachment("");
   return (
-    <form onSubmit={onSubmit}>
-      <input
-        value={yweet}
-        onChange={onChange}
-        type="text"
-        placeholder="트윗을 작성해주세요"
-        maxLength={120}
-      />
+    <form className="YweetFactory-Form" onSubmit={onSubmit}>
+      <div className="YweetFactory-Input-Container">
+        <input
+          value={yweet}
+          onChange={onChange}
+          type="text"
+          placeholder="트윗을 작성해주세요"
+          maxLength={120}
+          className="YweetFactory-Input"
+        />
+        <input
+          type="submit"
+          value="&rarr;"
+          className="YweetFactory-InputArrow"
+        />
+      </div>
       {/* 사진을 추가하는 버튼은 type 을 file 로 하면된다. */}
-      <input onChange={onFileChange} type="file" accept="image/*" />
-      <input type="submit" value="Yweet" />
+      <label for="attach-file" className="YweetFactory-Label">
+        <span>Add photos</span>
+        <FontAwesomeIcon icon={faPlus} />
+      </label>
+      <input
+        id="attach-file"
+        onChange={onFileChange}
+        type="file"
+        accept="image/*"
+        className="YweetFactory-AddPhotos-Btn"
+      />
       {attachment && (
-        <div>
-          <img src={attachment} alt="preview" width="50px" height="50px" />
-          <button onClick={onClearAttachment}>Clear</button>
+        <div className="YweetFactory-Form-Attachment">
+          <img
+            src={attachment}
+            alt="preview"
+            style={{
+              backgroundImage: attachment,
+            }}
+          />
+          <div className="YweetFactory-Form-Clear" onClick={onClearAttachment}>
+            <span>지우기</span>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
         </div>
       )}
     </form>

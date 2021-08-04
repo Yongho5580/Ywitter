@@ -8,6 +8,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import "../css/Auth.css";
+import "../css/App.css";
 
 /*
 input 들의 value 에 state 값을 부여하고 onChange 이벤트를 통해 만약 해당 이벤트가 발생된 곳의 name이

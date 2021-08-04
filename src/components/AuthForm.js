@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { authService } from "../fbase";
 import "../css/AuthForm.css";
+import "../css/App.css";
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
@@ -44,7 +45,7 @@ const AuthForm = () => {
   const toggleAccount = () => setNewAccount((prev) => !prev);
   return (
     <>
-      <form className="AuthForm-Container" onSubmit={onSubmit}>
+      <form className="container" onSubmit={onSubmit}>
         <input
           className="AuthForm-Input"
           name="email"

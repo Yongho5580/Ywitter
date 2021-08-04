@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Yweet from "../components/Yweet";
 import YweetFactory from "../components/YweetFactory";
 import { dbService } from "../fbase";
+import "../css/App.css";
 
 const Home = ({ userObj }) => {
   const [yweets, setYweets] = useState([]);
@@ -23,9 +24,9 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <YweetFactory userObj={userObj} />
-      <div>
+      <div style={{ marginTop: 30 }}>
         {/* 우리가 임의로 부여한 yweet의 creatorId와 userObj의 uid의 값이 일치하면 동일 유저임으로 트윗 추가, 삭제 버튼을 부여할 수 있게 해주는 프로퍼티*/}
         {yweets.map((yweet) => (
           <Yweet

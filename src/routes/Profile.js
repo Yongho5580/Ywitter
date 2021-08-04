@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { authService, dbService } from "../fbase";
 import { useHistory } from "react-router-dom";
+import "../css/App.css";
 const Profile = ({ userObj, refreshUser }) => {
   const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
 
@@ -38,22 +39,21 @@ const Profile = ({ userObj, refreshUser }) => {
   };
 
   return (
-    <div className="Profile-Container">
-      <form className="Profile-Form" onSubmit={onSubmit}>
+    <div className="container">
+      <form className="profileForm" onSubmit={onSubmit}>
         <input
           autoFocus
           onChange={onChange}
           value={newDisplayName}
           type="text"
           placeholder="Display name"
+          className="formInput"
         />
-        <input
-          className="Profile-UpdateProfile-Btn"
-          type="submit"
-          value="Update Profile"
-        />
+        <input className="formBtn" type="submit" value="Update Profile" />
       </form>
-      <button onClick={onLogoutClick}>로그아웃</button>
+      <span className="formBtn cancelBtn logOut" onClick={onLogoutClick}>
+        로그아웃
+      </span>
     </div>
   );
 };
