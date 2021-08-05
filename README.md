@@ -1,8 +1,9 @@
 # Ywitter
 
-https://yongho5580.github.io/Ywitter/#/
+https://yongho5580.github.io/Ywitter
 
-![Uploading ezgif.com-gif-maker.gif…]()
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/70843139/128324443-c290d42d-acae-40e2-8e64-12025d97409f.gif)
+
 
 
 ## Introduce Project
