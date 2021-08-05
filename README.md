@@ -17,6 +17,6 @@ Ywitter는 향후 보다 나은 안정성을 위해 Typescript와 효율적인 �
 
 ### Back-end : Firestore Authentication, Firestore Database, Firestore Storage
 
-### Deploy : Github Pages
+### Deploy : Github Pagesa
 
 
