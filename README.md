@@ -11,10 +11,10 @@ React-router 를 이용해 로그인할 수 있는 페이지와 로그인 한 �
 
 ## Tech-Stacks
 
-Front-end : React, React-Hooks, Firebase, SCSS
+### Front-end : React, React-Hooks, Firebase, SCSS
 
-Back-end : Firestore Authentication, Firestore Database, Firestore Storage
+### Back-end : Firestore Authentication, Firestore Database, Firestore Storage
 
-Deploy : Github Pages
+### Deploy : Github Pages
 
 
