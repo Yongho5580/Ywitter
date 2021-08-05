@@ -68,7 +68,9 @@ const Yweet = ({ yweetObj, isOwner }) => {
         <>
           <div>{yweetObj.displayName}</div>
           <h4>{yweetObj.text}</h4>
-          {yweetObj.attachmentUrl && <img src={yweetObj.attachmentUrl} />}
+          {yweetObj.attachmentUrl && (
+            <img alt="attachment" src={yweetObj.attachmentUrl} />
+          )}
           {isOwner && (
             <div className="nweet__actions">
               <span onClick={onDeleteClick}>

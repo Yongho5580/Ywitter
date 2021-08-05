@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { authService, dbService } from "../fbase";
+import { authService } from "../fbase";
 import { useHistory } from "react-router-dom";
 import "../css/Profile.css";
 import "../css/App.css";
@@ -10,10 +10,16 @@ const Profile = ({ userObj, refreshUser }) => {
 
   const history = useHistory();
   const onLogoutClick = () => {
-    history.push("/"); // 로그아웃 버튼을 누르면 "/" URL 로 라우팅 하는 메소드
-    authService.signOut();
+    const confirm = window.confirm("로그아웃 하시겠습니까?");
+    if (confirm) {
+      history.push("/"); // 로그아웃 버튼을 누르면 "/" URL 로 라우팅 하는 메소드
+      authService.signOut();
+    } else {
+      return;
+    }
   };
   useEffect(() => {
+    /*
     const getMyYweets = async () => {
       // where 은 필터링 하는 메소드, yweets 컬렉션의 creatorId 필드와 userObj.uid 값이 == (같은) 것을 찾고 get 하는 것
       const yweets = await dbService
@@ -23,6 +29,7 @@ const Profile = ({ userObj, refreshUser }) => {
         .get();
     };
     getMyYweets();
+    */
     Aos.init();
   });
   const onSubmit = async (e) => {

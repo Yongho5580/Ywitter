@@ -105,6 +105,7 @@ const YweetFactory = ({ userObj }) => {
       {attachment && (
         <div className="factoryForm__attachment">
           <img
+            alt="attachment"
             src={attachment}
             style={{
               backgroundImage: attachment,
