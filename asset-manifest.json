@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/Ywitter/static/css/main.a576b65b.chunk.css",
-    "main.js": "/Ywitter/static/js/main.0378fda3.chunk.js",
-    "main.js.map": "/Ywitter/static/js/main.0378fda3.chunk.js.map",
+    "main.css": "/Ywitter/static/css/main.cbf3d465.chunk.css",
+    "main.js": "/Ywitter/static/js/main.df429e53.chunk.js",
+    "main.js.map": "/Ywitter/static/js/main.df429e53.chunk.js.map",
     "runtime-main.js": "/Ywitter/static/js/runtime-main.e803be5f.js",
     "runtime-main.js.map": "/Ywitter/static/js/runtime-main.e803be5f.js.map",
-    "static/js/2.64525975.chunk.js": "/Ywitter/static/js/2.64525975.chunk.js",
-    "static/js/2.64525975.chunk.js.map": "/Ywitter/static/js/2.64525975.chunk.js.map",
+    "static/css/2.7fc9bc2b.chunk.css": "/Ywitter/static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.305b5848.chunk.js": "/Ywitter/static/js/2.305b5848.chunk.js",
+    "static/js/2.305b5848.chunk.js.map": "/Ywitter/static/js/2.305b5848.chunk.js.map",
     "index.html": "/Ywitter/index.html",
-    "static/css/main.a576b65b.chunk.css.map": "/Ywitter/static/css/main.a576b65b.chunk.css.map",
-    "static/js/2.64525975.chunk.js.LICENSE.txt": "/Ywitter/static/js/2.64525975.chunk.js.LICENSE.txt"
+    "static/css/2.7fc9bc2b.chunk.css.map": "/Ywitter/static/css/2.7fc9bc2b.chunk.css.map",
+    "static/css/main.cbf3d465.chunk.css.map": "/Ywitter/static/css/main.cbf3d465.chunk.css.map",
+    "static/js/2.305b5848.chunk.js.LICENSE.txt": "/Ywitter/static/js/2.305b5848.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e803be5f.js",
-    "static/js/2.64525975.chunk.js",
-    "static/css/main.a576b65b.chunk.css",
-    "static/js/main.0378fda3.chunk.js"
+    "static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.305b5848.chunk.js",
+    "static/css/main.cbf3d465.chunk.css",
+    "static/js/main.df429e53.chunk.js"
   ]
 }
