@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { storageService, dbService } from "../fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../css/App.css";
 import "../css/YweetFactory.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const YweetFactory = ({ userObj }) => {
   const [yweet, setYweet] = useState("");
@@ -69,9 +71,13 @@ const YweetFactory = ({ userObj }) => {
     };
   };
   const onClearAttachment = () => setAttachment("");
+
+  useEffect(() => {
+    Aos.init();
+  });
   return (
     <form onSubmit={onSubmit} className="factoryForm">
-      <div className="factoryInput__container">
+      <div data-aos="zoom-in" className="factoryInput__container">
         <input
           className="factoryInput__input"
           value={yweet}
@@ -83,8 +89,9 @@ const YweetFactory = ({ userObj }) => {
         <input type="submit" value="&rarr;" className="factoryInput__arrow" />
       </div>
       <label htmlFor="attach-file" className="factoryInput__label">
-        <span>사진 추가하기</span>
-        <FontAwesomeIcon icon={faPlus} />
+        <span data-aos="zoom-in" duration={1000}>
+          사진 추가하기 <FontAwesomeIcon icon={faPlus} />
+        </span>
       </label>
       <input
         id="attach-file"

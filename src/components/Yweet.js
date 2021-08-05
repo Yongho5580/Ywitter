@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { dbService, storageService } from "../fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import "../css/Yweet.css";
 import "../css/App.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Yweet = ({ yweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -38,8 +40,12 @@ const Yweet = ({ yweetObj, isOwner }) => {
     setNewYweet(value);
   };
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  });
+
   return (
-    <div className="nweet">
+    <div data-aos="fade-up" className="nweet">
       {editing ? (
         <>
           <form onSubmit={onSubmit} className="container nweetEdit">
@@ -52,7 +58,7 @@ const Yweet = ({ yweetObj, isOwner }) => {
               onChange={onChange}
               className="formInput"
             />
-            <input type="submit" value="Update Nweet" className="formBtn" />
+            <input type="submit" value="트윗 수정하기" className="formBtn" />
           </form>
           <span onClick={toggleEditing} className="formBtn cancelBtn">
             취소

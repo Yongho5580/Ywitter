@@ -3,6 +3,8 @@ import { authService, dbService } from "../fbase";
 import { useHistory } from "react-router-dom";
 import "../css/Profile.css";
 import "../css/App.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Profile = ({ userObj, refreshUser }) => {
   const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
 
@@ -21,6 +23,7 @@ const Profile = ({ userObj, refreshUser }) => {
         .get();
     };
     getMyYweets();
+    Aos.init();
   });
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +50,7 @@ const Profile = ({ userObj, refreshUser }) => {
   };
 
   return (
-    <div className="container">
+    <div data-aos="fade-up" className="container">
       <form onSubmit={onSubmit} className="profileForm">
         <input
           onChange={onChange}
