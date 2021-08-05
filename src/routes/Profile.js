@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { authService } from "../fbase";
+import { dbService, authService } from "../fbase";
 import { useHistory } from "react-router-dom";
 import "../css/Profile.css";
 import "../css/App.css";
@@ -19,7 +19,6 @@ const Profile = ({ userObj, refreshUser }) => {
     }
   };
   useEffect(() => {
-    /*
     const getMyYweets = async () => {
       // where 은 필터링 하는 메소드, yweets 컬렉션의 creatorId 필드와 userObj.uid 값이 == (같은) 것을 찾고 get 하는 것
       const yweets = await dbService
@@ -29,7 +28,6 @@ const Profile = ({ userObj, refreshUser }) => {
         .get();
     };
     getMyYweets();
-    */
     Aos.init();
   });
   const onSubmit = async (e) => {
@@ -41,6 +39,7 @@ const Profile = ({ userObj, refreshUser }) => {
           displayName: newDisplayName,
         });
         window.confirm("업데이트를 완료했습니다.");
+        history.push("/");
       } else {
         return;
       }
