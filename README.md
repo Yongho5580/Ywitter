@@ -1,6 +1,6 @@
 # Ywitter
 
-<a href="https://yongho5580.github.io/Ywitter" target="_blank">Ywitter 홈페이지</a>
+<a target="_blank" href="https://yongho5580.github.io/Ywitter">Ywitter 홈페이지</a>
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/70843139/128325190-e5768bf4-d8ae-4e90-b587-c011bc7dc6dc.gif)
 
