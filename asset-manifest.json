@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ywitter/static/css/main.cbf3d465.chunk.css",
-    "main.js": "/Ywitter/static/js/main.11b74d33.chunk.js",
-    "main.js.map": "/Ywitter/static/js/main.11b74d33.chunk.js.map",
+    "main.js": "/Ywitter/static/js/main.9b7bcbb1.chunk.js",
+    "main.js.map": "/Ywitter/static/js/main.9b7bcbb1.chunk.js.map",
     "runtime-main.js": "/Ywitter/static/js/runtime-main.e803be5f.js",
     "runtime-main.js.map": "/Ywitter/static/js/runtime-main.e803be5f.js.map",
     "static/css/2.7fc9bc2b.chunk.css": "/Ywitter/static/css/2.7fc9bc2b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.7fc9bc2b.chunk.css",
     "static/js/2.99635899.chunk.js",
     "static/css/main.cbf3d465.chunk.css",
-    "static/js/main.11b74d33.chunk.js"
+    "static/js/main.9b7bcbb1.chunk.js"
   ]
 }
