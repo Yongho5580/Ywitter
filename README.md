@@ -1,8 +1,9 @@
 # Ywitter
 
-https://yongho5580.github.io/Ywitter
+<a href="https://yongho5580.github.io/Ywitter" target="_blank">Ywitter 홈페이지</a>
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/70843139/128324443-c290d42d-acae-40e2-8e64-12025d97409f.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/70843139/128325190-e5768bf4-d8ae-4e90-b587-c011bc7dc6dc.gif)
+
 
 
 
