@@ -18,8 +18,7 @@ Ywitter는 향후 보다 나은 안정성을 위해 Typescript와 효율적인 �
 ## Tech-Stacks
 
 ### Front-end
-![](https://img.shields.io/badge/FRONT-REACT-00AEFF?style=for-the-badge&logo=React)</br>
-![](https://img.shields.io/badge/FRONT-SCSS-hotpink?style=for-the-badge&logo=scss)
+![](https://img.shields.io/badge/FRONT-REACT-00AEFF?style=for-the-badge&logo=React)![](https://img.shields.io/badge/FRONT-SCSS-hotpink?style=for-the-badge&logo=scss)
 
 ### Back-end : Firestore Authentication, Firestore Database, Firestore Storage
 
