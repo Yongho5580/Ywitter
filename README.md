@@ -7,7 +7,7 @@
 
 
 
-## Introduce Project
+## 프로젝트 소개
 
 Ywitter는 React 중심의 CRUD 와 Firebase를 이용한 소셜 로그인, 데이터베이스, 스토리지 서비스를 내포한 SNS 토이 프로젝트 입니다.
 
@@ -25,3 +25,13 @@ Ywitter는 향후 보다 나은 안정성을 위해 Typescript와 효율적인 �
 
 ### Deploy
 ![](https://img.shields.io/badge/Github_Pages-14191E?style=for-the-badge&logo=Github)
+
+## 기능 소개
+
+1. Firebase 를 기반으로 한 소셜 로그인 기능을 통해 간편한 로그인이 가능합니다.
+
+2. 작성하고 싶은 Yweet 내용을 자유롭게 작성, 수정, 삭제가 가능합니다. Yweet에는 사진 또한 첨부가 가능합니다.
+
+3. 프로필 닉네임 변경이 가능합니다.
+
+
