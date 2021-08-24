@@ -18,7 +18,7 @@ Ywitter는 향후 보다 나은 안정성을 위해 Typescript와 효율적인 �
 ## Tech-Stacks
 
 ### Front-end
-![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=scss)
+![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=Sass)
 
 ### Back-end
 ![](https://img.shields.io/badge/Firestore_Authentication-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Database-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Storage-white?style=for-the-badge&logo=Firebase)
