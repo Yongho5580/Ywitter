@@ -16,7 +16,7 @@ React-router 를 이용해 로그인할 수 있는 페이지와 로그인 한 �
 ## Tech-Stacks
 
 ### Front-end
-![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/Redux-9401D3?style=for-the-badge&logo=Redux) ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=Sass) 
+![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React)  ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=Sass) 
 
 ### Back-end
 ![](https://img.shields.io/badge/Firestore_Authentication-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Database-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Storage-white?style=for-the-badge&logo=Firebase)
