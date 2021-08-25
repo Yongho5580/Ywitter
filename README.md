@@ -18,7 +18,7 @@ Ywitter는 향후 효율적인 상태관리를 위한 Redux를 도입해 리팩�
 ## Tech-Stacks
 
 ### Front-end
-![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/Redux-#9401D3?style=for-the-badge&logo=Redux) ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=Sass) 
+![](https://img.shields.io/badge/React-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/React_Hooks-2A2C2E?style=for-the-badge&logo=React) ![](https://img.shields.io/badge/Redux-9401D3?style=for-the-badge&logo=Redux) ![](https://img.shields.io/badge/SCSS-hotpink?style=for-the-badge&logo=Sass) 
 
 ### Back-end
 ![](https://img.shields.io/badge/Firestore_Authentication-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Database-white?style=for-the-badge&logo=Firebase), ![](https://img.shields.io/badge/Firestore_Storage-white?style=for-the-badge&logo=Firebase)
